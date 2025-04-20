@@ -1,5 +1,3 @@
-
-
 function Cards({item}) {
   return (
     <>

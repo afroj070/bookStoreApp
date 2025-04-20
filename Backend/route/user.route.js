@@ -1,8 +1,17 @@
-// import express from "express";
-// import { signup, login } from "../controller/user.controller.js";
-// const router = express.Router();
+import express from "express";
+import { signup,
+    login,
+    userData,
+    updateUser,
+    deleteUser
+} from "../controller/user.controller.js";
 
-// router.post("/signup", signup);
-// router.post("/login", login);
+const router = express.Router();
 
-// export default router;
+router.post("/signup", signup); // send some data
+router.post("/login", login);
+router.put("/:id/update", updateUser);
+router.delete("/:id/delete", deleteUser);
+router.get("/", userData); // only recieve data from server or database.
+
+export default router;
